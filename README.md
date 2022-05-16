@@ -1,5 +1,12 @@
-# Getting Started with Create React App
+# Weather Forecast 
 
+This project i exercise with useContext and createContext 
+
+*  [Live App https://weather-forecast-turkey.netlify.app/ ](https://weather-forecast-turkey.netlify.app/)
+
+<br>
+<br>
+## Getting Started with Create React App
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
