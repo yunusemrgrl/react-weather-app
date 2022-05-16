@@ -27,6 +27,7 @@ function DaysCard() {
                 </p>
                 <img
                   src={`https://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`}
+                  alt={`weather-icon "${i}"`}
                 />
                 <p>
                   {item.weather[0].description.toUpperCase()}
