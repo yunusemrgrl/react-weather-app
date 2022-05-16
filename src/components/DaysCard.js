@@ -17,25 +17,31 @@ function DaysCard() {
     <>
       {weather.map((item, i) => {
         return (
-          <div className="single-user" key={i}>
+          <article className="single-user" key={i}>
             <div className="content-card">
-              <img
-                src={`https://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`}
-              />
-
               <div className="single-item-text">
-                <p>
-                  {days[new Date(item.dt * 1000).getDay()]}
+                <p className="single-item-title">
+                  {days[
+                    new Date(item.dt * 1000).getDay()
+                  ].toUpperCase()}
                 </p>
-                <p>{item.weather[0].description}</p>
+                <img
+                  src={`https://openweathermap.org/img/wn/${item.weather[0].icon}@2x.png`}
+                />
                 <p>
-                  {Math.round(item.temp['max'] - 273.15)}/
+                  {item.weather[0].description.toUpperCase()}
+                </p>
+                <span className="tmp-high">
+                  {Math.round(item.temp['max'] - 273.15)}
+                </span>
+                /
+                <span>
                   {Math.round(item.temp['min'] - 273.15)}
                   &deg;C
-                </p>
+                </span>
               </div>
             </div>
-          </div>
+          </article>
         );
       })}
     </>

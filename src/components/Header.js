@@ -3,7 +3,7 @@ function Header() {
   const { city } = useWeather();
   return (
     <div>
-      <h1>{city.name} Haftalık Hava Durumu</h1>
+      <h1>{city.name} Daily Weather Forecast</h1>
     </div>
   );
 }

@@ -10,13 +10,13 @@ export const WeatherProvider = ({ children }) => {
   const [city, setCity] = useState(citiesJSON[25]);
 
   const days = [
-    'Sun',
-    'Mon',
-    'Tue',
-    'Wed',
-    'Thu',
-    'Fri',
-    'Sat',
+    'Sunday',
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+    'Saturday',
   ];
 
   const value = {

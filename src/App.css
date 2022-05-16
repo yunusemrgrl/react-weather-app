@@ -5,9 +5,14 @@
 }
 body {
   width: 100%;
+  height: 100%;
   line-height: 1.5;
   background-color: #ffffff;
   font-family: 'Open Sans', Arial, sans-serif;
+  background-image: url(./assets/25501.jpg);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
 }
 h1,
 h2,
@@ -17,11 +22,16 @@ h3 {
   margin: 20px;
 }
 p {
-  color: #fff;
+  color: #000;
+}
+p + p {
+  margin-top: 8px;
 }
 /********** SELECT BOX ********/
 .select-box {
   text-align: center;
+  border: 0px;
+  outline: 0px;
 }
 .select-box select {
   padding: 10px;
@@ -31,9 +41,8 @@ p {
 /********** DAY CARD *********/
 .section {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 }
 .container {
   display: grid;
@@ -41,21 +50,26 @@ p {
     auto-fit,
     minmax(300px, 1fr)
   );
+  margin-top: 5rem;
   grid-gap: 4rem;
-  max-width: 1280px;
+  max-width: 1880px;
   width: 100%;
   padding: 20px;
 }
 .content-card {
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 20px 0;
-  background-color: rgb(4, 124, 230);
-  border: 2px solid;
-  border-top-right-radius: 30px;
-  border-bottom-right-radius: 30px;
+  background-color: rgba(206, 223, 238, 0.2);
   width: 100%;
+  height: 100%;
   max-width: 280px;
+  text-align: center;
+}
+.content-card:hover {
+  background-color: rgb(28, 221, 255, 0.3);
+  box-shadow: 5px 5px 5px#222;
 }
 .single-user {
   display: flex;
@@ -63,8 +77,29 @@ p {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 200px;
+  height: 300px;
 }
-.single-user:hover {
-  box-shadow: 5px 5px 5px#222;
+article:first-child .content-card {
+  background-color: rgba(206, 223, 238, 0.8);
+}
+article:first-child .content-card:hover {
+  background-color: rgb(28, 221, 255, 0.3);
+}
+.single-item-title {
+  font-size: 24px;
+  padding: 8px;
+  background-color: rgb(255, 255, 255, 0.4);
+  border-radius: 10px;
+}
+.tmp-high {
+  font-size: 24px;
+}
+
+@media only screen and (max-width: 330px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
